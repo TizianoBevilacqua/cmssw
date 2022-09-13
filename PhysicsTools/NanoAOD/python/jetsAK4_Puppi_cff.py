@@ -100,6 +100,11 @@ jetPuppiTable = cms.EDProducer("SimpleCandidateFlatTableProducer",
         chEmEF = Var("chargedEmEnergyFraction()", float, doc="charged Electromagnetic Energy Fraction", precision= 6),
         neEmEF = Var("neutralEmEnergyFraction()", float, doc="neutral Electromagnetic Energy Fraction", precision= 6),
         muEF = Var("muonEnergyFraction()", float, doc="muon Energy Fraction", precision= 6),
+	particleNetAK4_B = Var("?pt>15?bDiscriminator('pfParticleNetAK4DiscriminatorsJetTags:BvsAll'):-1",float,doc="ParticleNetAK4 tagger b vs all (udsg, c) discriminator",precision=10),
+  	particleNetAK4_CvsL = Var("?pt>15?bDiscriminator('pfParticleNetAK4DiscriminatorsJetTags:CvsL'):-1",float,doc="ParticleNetAK4 tagger c vs udsg discriminator",precision=10),
+  	particleNetAK4_CvsB = Var("?pt>15?bDiscriminator('pfParticleNetAK4DiscriminatorsJetTags:CvsB'):-1",float,doc="ParticleNetAK4 tagger c vs b discriminator",precision=10),
+  	particleNetAK4_QvsG = Var("?pt>15?bDiscriminator('pfParticleNetAK4DiscriminatorsJetTags:QvsG'):-1",float,doc="ParticleNetAK4 tagger uds vs g discriminator",precision=10),
+  	particleNetAK4_puIdDisc = Var("?pt>15?1-bDiscriminator('pfParticleNetAK4JetTags:probpu'):-1",float,doc="ParticleNetAK4 tagger pileup jet discriminator",precision=10),
     )
 )
 
