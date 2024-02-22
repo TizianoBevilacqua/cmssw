@@ -253,7 +253,7 @@ run2_egamma.toModify(
     energyErr = Var("userFloat('ecalEnergyErrPostCorrNew')",float,doc="energy error of the cluster from regression",precision=6),
     eCorr = Var("userFloat('ecalEnergyPostCorrNew')/userFloat('ecalEnergyPreCorrNew')",float,doc="ratio of the calibrated energy/miniaod energy"),
     # hoe = Var("hadTowOverEm()",float,doc="H over E (Run2)",precision=8),
-    hoe = Var("hadronicOverEm()",float,doc="H over E (Run2)",precision=8),
+    hoe = Var("hadronicOverEm()",float,doc="H over E (Run2) calo based",precision=8),
     cutBased = Var(
             "userInt('cutBasedID_Fall17V2_loose')+userInt('cutBasedID_Fall17V2_medium')+userInt('cutBasedID_Fall17V2_tight')",
             "uint8",
